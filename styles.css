@@ -6,7 +6,7 @@
   --primary: #2563eb;
   --primary-dark: #1d4ed8;
   --secondary: #0f172a;
-  --accent: #7c3aed;
+  --accent: #493aed;
   --light: #f8fafc;
   --dark: #1e293b;
   --success: #10b981;
@@ -153,14 +153,14 @@ header img:hover {
     animation: fadeIn 1.2s ease 0.8s backwards;
   }
   
-  .contact-buttons a {
+.contact-buttons a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 12px 24px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    background-color: transparent; /* Changed to transparent for real icon colors */
+    border: none; /* Removed border to avoid color issues */
+    color: inherit; /* Inherit color to ensure real icon colors */
     text-decoration: none;
     border-radius: 50px;
     font-weight: 500;
@@ -168,7 +168,7 @@ header img:hover {
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
-  }
+}
   
   .contact-buttons a:hover {
     background-color: var(--accent);
@@ -184,21 +184,6 @@ header img:hover {
     font-size: 1.1rem;
   }
   
-  .contact-buttons a[href*="github"]::before {
-    content: "\f09b";
-  }
-  
-  .contact-buttons a[href*="linkedin"]::before {
-    content: "\f08c";
-  }
-  
-  .contact-buttons a[href*="mailto"]::before {
-    content: "\f0e0";
-  }
-  
-  .contact-buttons a[href*="wa.me"]::before {
-    content: "\f232";
-  }
   
   /* Main Content Layout */
   main {
