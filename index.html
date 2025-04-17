@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portafolio de Desarrollador</title>
+</head>
+<body>
+    <header>
+        <h1>Miguel Alejandro Ruano Quintero</h1>
+        <h2>Desarrollador Fullstack</h2>
+        <p>“Apasionado por el desarrollo de software para construir soluciones digitales eficientes y elegantes”</p>
+        <img src="foto.jpg" alt="Foto Profesional" />
+        <div class="contact-buttons">
+            <a href="https://github.com/ruanomiguel" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/miguel-ruano" target="_blank">LinkedIn</a>
+            <a href="mailto:ruanomiguelalejandro@gmail.com">Correo</a>
+            <a href="https://wa.me/3148171914">WhatsApp</a>
+        </div>
+    </header>
+    
+    <section id="about">
+        <h2>Sobre Mí</h2>
+        <p>Descripción personal: Soy Miguel, ingeniero informático egresado del Colegio Mayor del Cauca. Me especializo en el desarrollo de aplicaciones móviles con Flutter y backend con Node.js y Express. Me apasiona crear soluciones útiles para la gente.</p>
+        <p>Nivel académico: Ingeniero informático</p>
+        <p>Experiencia: Proyectos freelance y prácticas.</p>
+        <p>Tecnologías favoritas: Flutter, Node.js, Express, React.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project">
+            <h3>App de Recolección de Café</h3>
+            <p>Una app móvil para que los agricultores registren kilos recolectados, calculen pagos y lleven el historial por trabajador.</p>
+            <p>Tecnologías: Flutter, SQLite con SQflite, Firebase.</p>
+            <a href="https://github.com/ruanomiguel/agrolevel" target="_blank">GitHub</a>
+            <a href="https://demo.app-cafe.com" target="_blank">Descargar apk</a>
+        </div>
+        <div class="project">
+            <h3>App de Registro de Ventas e inventario</h3>
+            <p>Una app móvil para llevar la contabilidas segun las diferentes transacciones como compras y ventas. Ademas de llevar el inventario de productos como su stock y ganancias por productos y general .</p>
+            <p>Tecnologías: Flutter, SQLite con SQflite, Firebase, barcode_scan2.</p>
+            <a href="https://github.com/ruanomiguel/tienda-punto-clave" target="_blank">GitHub</a>
+            <a href="https://demo.app-cafe.com" target="_blank">Descargar apk</a>
+        </div>
+    </section>
+    
+    <section id="tech-stack">
+        <h2>Stack Tecnológico</h2>
+        <p>Frontend: HTML, CSS, JavaScript, React, Flutter, Next.js</p>
+        <p>Backend: Node.js, Express, Java (Spring), Python (Django),Aangular, MySQL, MongoDB</p>
+        <p>Otros: Git, GitHub, Firebase, Postman, Figma, Docker</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <p>Técnicas: manejo de versiones, consumo de APIs, diseño responsivo, manejo de bases de datos.</p>
+        <p>Blandas: trabajo en equipo, comunicación, resolución de problemas, organización, aprendizaje continuo.</p>
+    </section>
+    
+    <section id="certifications">
+        <h2>Certificaciones y Logros</h2>
+        <img src="logoUniversidadpereira.jpg" alt="Logotipo de Universidad Tecnológica de Pereira" />
+        <p>Bootcamp Inteligencia Artificial Nivel Intermedio</p>
+        <p>Expedición: sept. 2024</p>
+        <p>ID de la credencial: 0xcf7b074d4dcc6b3b060fd455302eb67b0d94d06b4243b35599d26a96149f195d</p>
+        <a href="https://www.acreditta.com/credential/a4bf50b1-1a17-4e67-b050-66670db04967?utm_source=copy&resource_type=badge&resource=a4bf50b1-1a17-4e67-b050-66670db04967" target="_blank">Ver crendencial</a>
+
+        <p></p>
+
+        <p>Técnico en Asistencia Administrativa del SENA</p>
+    </section>
+    
+    <section id="cv">
+        <h2>CV Descargable</h2>
+        <a href="hoja de vida Miguel-Ruano cv.pdf" download>Descargar CV</a>
+    </section>
+    
+    <footer>
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Correo: ruanomiguelalejandro@gmail.com</p>
+    </footer>
+    
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show-section');
+          }
+        });
+      }, {threshold: 0.1});
+      
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+      
+      // Form submission
+      const form = document.querySelector('form');
+      if(form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          // Add your form submission logic here
+          alert('¡Gracias por tu mensaje! Te contactaré pronto.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+
