@@ -337,12 +337,7 @@ header img:hover {
     box-shadow: 0 5px 15px rgba(99, 102, 241, 0.2);
   }
   
-  #projects .project a[href*="github"]::before {
-    content: "\f09b";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    margin-right: 8px;
-  }
+ 
   
   #projects .project a[href*="demo"]::before {
     content: "\f108";
