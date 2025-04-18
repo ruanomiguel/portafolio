@@ -56,7 +56,6 @@
       <p>Aplicación híbrida enfocada en el sector agropecuario, permite gestionar fincas, trabajadores, costos de producción, gastos y ganancias.</p>
       <p><strong>Tecnologías:</strong> Angular con Ionic, Firebase</p>
       <a href="https://github.com/LuisHolguin21/software-contable" target="_blank"><i class="fab fa-github"></i> Repositorio</a>
-      <a href="https://demo.app-cafe.com" target="_blank">Descargar APK</a>
     </div>
 
     <div class="project">
@@ -104,7 +103,7 @@
 
   <footer>
     <h2>Contacto</h2>
-    <form>
+<form action="/send-email" method="POST">
       <label for="name">Nombre:</label>
       <input type="text" id="name" name="name" required />
       <label for="email">Correo:</label>
@@ -130,14 +129,7 @@
         observer.observe(section);
       });
 
-      const form = document.querySelector('form');
-      if (form) {
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-          form.reset();
-        });
-      }
+      // Removed form submit event listener to allow normal form submission
     });
   </script>
 </body>
